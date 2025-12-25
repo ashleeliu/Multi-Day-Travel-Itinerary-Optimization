@@ -4,15 +4,27 @@ In this final course project, I formulated a mixed-integer optimization model to
 
 The model integrates real-world considerations such as lodging selection, transportation costs, activity scheduling, time windows, and traveler fatigue. It demonstrates how decision analytics and optimization techniques can be applied to everyday planning problems.
 
+## What It Does
+
+* Computes an optimal travel plan including lodging, transportation, and activity schedule
+
+* Balances cost, time availability, and fatigue penalties
+
+* Handles activity dependencies and eligibility constraints
+
+* Outputs a structured itinerary that satisfies all constraints
+
 ## Modeling Approach
 
-* Decision Variables: lodging and car selection, activity scheduling by day
+The problem is modeled as a mixed-integer optimization using Pyomo, and solved with HiGHS.
 
-* Constraints: time windows, activity dependencies, fatigue limits, and feasibility rules
+Key components:
 
-* Objective: minimize total cost and fatigue penalties under worst-case pricing assumptions
+* Decision variables: lodging selection, car rental choice, activity scheduling by day
 
-The optimization is implemented in Pyomo and solved using the HiGHS solver.
+* Constraints: time windows, activity dependencies, non-overlapping activities, fatigue limits
+
+* Objective: minimize total cost + weighted fatigue penalties
 
 ## Results
 
@@ -32,7 +44,7 @@ and produces a balanced activity schedule across all three days with a total obj
 
 * HiGHS Solver
 
-* LaTeX
+* LaTeX (for the final project report)
 
 ## Notes
 
